@@ -22,10 +22,45 @@ body {
     position: relative;
     height: 30vh;
     width: 20vw;
+}
+
+#PartyList page {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+
 }
+
+
+#PartyList guestPage {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: -1;
+    font-size: 10pt;
+    text-align: left;
+}
+
+#PartyList partyrsvp:hover{
+    color:red;
+    cursor: pointer;
+}
+
+#PartyList .showAttendees guestPage {
+    z-index: 1;
+}
+
+#PartyList .showAttendees partyrsvp {
+    z-index: 2;
+}
+
 
 #PartyList>*:hover {
     cursor: default;
@@ -62,7 +97,7 @@ body {
     top: 6px;
     right: 6px;
     padding: 2px;
-    box-shadow:0 0 2px red inset;
+    box-shadow: 0 0 2px red inset;
     border-radius: 25px;
     width: 3ch;
     height: 3ch;
